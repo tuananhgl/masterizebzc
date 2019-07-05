@@ -1,0 +1,13 @@
++--------+----------------------------------------+----------------------------+----------------+----------------------------------------------------+--------------+
+| Domain | Method                                 | URI                        | Name           | Action                                             | Middleware   |
++--------+----------------------------------------+----------------------------+----------------+----------------------------------------------------+--------------+
+|        | GET|HEAD                               | admin/config               | config.index   | BackendModule\Controllers\ConfigController@index   | auth         |
+|        | POST                                   | admin/config               | config.store   | BackendModule\Controllers\ConfigController@store   | auth         |
+|        | GET|HEAD                               | admin/config/create        | config.create  | BackendModule\Controllers\ConfigController@create  | auth         |
+|        | GET|HEAD                               | admin/config/{config}      | config.show    | BackendModule\Controllers\ConfigController@show    | auth         |
+|        | PUT|PATCH                              | admin/config/{config}      | config.update  | BackendModule\Controllers\ConfigController@update  | auth         |
+|        | DELETE                                 | admin/config/{config}      | config.destroy | BackendModule\Controllers\ConfigController@destroy | auth         |
+|        | GET|HEAD                               | admin/config/{config}/edit | config.edit    | BackendModule\Controllers\ConfigController@edit    | auth         |
+|        | GET|HEAD                               | api/user                   |                | Closure                                            | api,auth:api |
+|        | GET|HEAD|POST|PUT|PATCH|DELETE|OPTIONS | login                      | login          | BackendModule\Controllers\AuthController@login     | web          |
++--------+----------------------------------------+----------------------------+----------------+----------------------------------------------------+--------------+
